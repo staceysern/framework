@@ -118,7 +118,11 @@ class Framework(object):
 
     def run(self, host='127.0.0.1', port=5000):
         from waitress import serve
-        serve(self, host=host, port=port)
+        try:
+            serve(self, host=host, port=port)
+        except Exception as e:
+            raise RuntimeError("Unable to start server on "
+                               "{}:{} ({})".format(host, port, e))
 
     def __call__(self, environ, start_response):
         request = webob.Request(environ)
