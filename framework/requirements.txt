@@ -1,0 +1,2 @@
+WebOb==1.4
+waitress==0.8.9
