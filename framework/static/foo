@@ -3,13 +3,6 @@
     <title>Foo</title>
   </head>
   <body bgcolor=white>
-
-    <table border="0" cellpadding="10">
-      <tr>
-        <td>
-          <h1>Foo</h1>
-        </td>
-      </tr>
-    </table>
+    <h1>Foo</h1>
   </body>
 </html>
