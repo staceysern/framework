@@ -31,8 +31,8 @@ class Router(object):
             else:
                 variables.add(name)
 
-            group = list('(?P<' + name + '>[a-zA-Z0-9-._~]+)')
-            groups.append((match.start(), match.end(),group))
+            group = '(?P<' + name + '>[a-zA-Z0-9-._~]+)'
+            groups.append((match.start(), match.end(), group))
 
         regex = list(rule)
         for start, end, group in groups[::-1]:
